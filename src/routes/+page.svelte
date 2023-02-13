@@ -5,11 +5,11 @@
 
 </script>
 <h1 class="font-monaSansBlackWide text-4xl">Welcome to SvelteKit</h1>
-<p class="text-grayish">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<p class="text-lightgrayish">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 {#if products.length === 0}
-	<p>Loading...</p>
+	<p class="text-lightgrayish">Loading...</p>
 {:else}
-	<p>Here are some products</p>
+	<p class="text-lightgrayish">Here are some products</p>
 {/if}
 <div class="grid">
 	{#each products as product}

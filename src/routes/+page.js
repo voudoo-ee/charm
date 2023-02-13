@@ -10,5 +10,5 @@ export async function load({ fetch, setHeaders }) {
       delete product.category;
     });
 
-  return { products };
+    return { products };
 }

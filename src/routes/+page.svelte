@@ -1,18 +1,27 @@
 <script>
-	import ProductNewer from "../components/ProductNewer.svelte";
-	export let data;
-	const { products } = data;
+	import Product from "../components/Product.svelte";
+	import Search from "../components/Search.svelte";
 
+	export let data;
+	let { products } = data;
 </script>
-<h1 class="font-monaSansBlackWide text-6xl">Welcome to SvelteKit</h1>
-<p class="text-lightgrayish">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-{#if products.length === 0}
-	<p class="text-lightgrayish">Loading...</p>
-{:else}
-	<p class="text-lightgrayish">Here are some products</p>
-{/if}
+
+<h1 class="font-monaSansExtraBoldWide text-[4rem]">Aitame hoida raha kokku.</h1>
+<h2 class="font-monaSansSemiBold text-2xl text-lightgrayish">Meie <span class="font-monaSansSemiBold transition duration-300 hover-underline-animation text-darker">otsingumootoriga</span> leiate igale toidupoe tootele kõige odavama hinna.</h2>
+<!--<p class="text-lightgrayish text-black z-10">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>-->
+<!--{#if products.length === 0}-->
+<!--	<p class="text-lightgrayish text-black z-10">Loading...</p>-->
+<!--{:else}-->
+<!--	<p class="text-lightgrayish text-black z-10">Here are some products</p>-->
+<!--{/if}-->
+
+<Search />
 <div class="grid">
 	{#each products as product}
-		<ProductNewer {...product} />
+		<Product {...product} />
 	{/each}
+	<div class="circle md:-translate-y-[25rem] md:translate-x-32 -translate-x-[10rem] scale-50 md:scale-100"></div>
+	<div class="circle md:-translate-x-52 md:translate-y-96 translate-x-24 -translate-y-[70rem] scale-50 md:scale-100"></div>
+	<div class="circle md:translate-x-[50rem] md:-translate-y-[10rem] translate-x-12 translate-y-[60rem] scale-50 md:scale-75"></div>
 </div>
+

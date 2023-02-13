@@ -11,6 +11,7 @@ module.exports = {
         "darker": "#AABA78",
         "dark": "#c5d2a3",
 				"grayish": "#585960",
+				"darkish": "#535864",
 				"lightgrayish": "#a6adbb",
 				"superblue": "#2a303c"
       },
@@ -25,5 +26,17 @@ module.exports = {
       },
 		}
 	},
-	plugins: [require('daisyui')]
+	plugins: [require('daisyui')],
+	daisyui: {
+		themes: [
+			{
+				custom: {
+					"primary": "#AABA78",
+					"secondary": "#238387",
+					"base-100": "#ffffff",
+				}
+			},
+			"light"
+		]
+	}
 };

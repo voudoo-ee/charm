@@ -31,9 +31,39 @@ a {
 	@apply font-monaSansSemiBold;
 }
 
+h1 {
+	@apply text-black;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #AABA78;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .main {
+	background: #fff;
+ 	/*background: rgb(255,255,255);*/
+	/*background: linear-gradient(180deg, rgba(255,255,255,1) 41%, rgba(170,186,120,1) 100%);*/
 	min-height: 100vh;
-	padding: 4rem 0;
+	padding: 4rem 0 0;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -42,17 +72,34 @@ a {
 }
 
 .grid {
-  display: grid;
-  grid-auto-rows: minmax(100px, auto);
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1600px;
-  padding-top: 5rem;
-  gap: 2rem;
-  @apply grid-cols-2  sm:grid-cols-2 md:grid-cols-3
-  lg:grid-cols-5;
-  @apply px-4 sm:gap-6 gap-2;
+	display: grid;
+	grid-auto-rows: minmax(100px, auto);
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1600px;
+	padding-top: 5rem;
+	gap: 2rem;
+	@apply grid-cols-2 sm:grid-cols-2 md:grid-cols-3
+	lg:grid-cols-5;
+	@apply px-4 sm:gap-6 gap-2 mb-24;
+}
+
+.footer-bg {
+	background: rgb(255,255,255);
+	background: linear-gradient(350deg, rgba(255,255,255,1) 34%, rgba(170,186,120,1) 100%);
+}
+
+.circle {
+	height: 30rem;
+	width: 30rem;
+	border-radius: 50%;
+	position: absolute;
+	@apply bg-darker blur-3xl opacity-40 z-0;
+}
+
+.social-icons a svg path {
+	@apply hover:scale-125;
 }
 
 @media (max-width: 600px) {

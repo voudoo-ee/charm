@@ -4,7 +4,7 @@
 	const { products } = data;
 
 </script>
-<h1 class="font-monaSansBlackWide text-4xl">Welcome to SvelteKit</h1>
+<h1 class="font-monaSansBlackWide text-6xl">Welcome to SvelteKit</h1>
 <p class="text-lightgrayish">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 {#if products.length === 0}
 	<p class="text-lightgrayish">Loading...</p>

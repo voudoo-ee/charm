@@ -3,6 +3,9 @@ module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			fontSize: {
+				'6xl': '3.450rem',
+			},
 			colors: {
         "lighter": "#f2f5dc",
         "darker": "#AABA78",

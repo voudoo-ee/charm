@@ -4,10 +4,55 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="viewport-fit=cover" />
 		<title>Svelte test</title>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+		<div class="main">%sveltekit.body%</div>
 	</body>
+
+	<style>
+		@font-face {
+		  font-family: Mona-Sans-Regular;
+		  /*noinspection CssUnknownTarget*/
+		  src: url("%sveltekit.assets%/fonts/Mona-Sans-Regular.woff2");
+		}
+
+		@font-face {
+			font-family: Mona-Sans-SemiBold;
+			/*noinspection CssUnknownTarget*/
+			src: url("%sveltekit.assets%/fonts/Mona-Sans-SemiBold.woff2");
+		}
+
+		@font-face {
+		  font-family: Mona-Sans-Medium;
+		  /*noinspection CssUnknownTarget*/
+		  src: url("%sveltekit.assets%/fonts/Mona-Sans-Medium.woff2");
+		}
+
+		@font-face {
+		  font-family: Mona-Sans-Black;
+		  /*noinspection CssUnknownTarget*/
+		  src: url("%sveltekit.assets%/fonts/Mona-Sans-Black.woff2");
+		}
+
+		@font-face {
+		  font-family: Mona-Sans-BlackWide;
+		  /*noinspection CssUnknownTarget*/
+		  src: url("%sveltekit.assets%/fonts/Mona-Sans-BlackWide.woff2");
+		}
+
+		@font-face {
+		  font-family: Mona-Sans-BoldWide;
+		  /*noinspection CssUnknownTarget*/
+		  src: url("%sveltekit.assets%/fonts/Mona-Sans-BoldWide.woff2");
+		}
+
+		@font-face {
+		  font-family: Mona-Sans-ExtraBoldWide;
+		  /*noinspection CssUnknownTarget*/
+		  src: url("%sveltekit.assets%/fonts/Mona-Sans-ExtraBoldWide.woff2");
+		}
+	</style>
 </html>

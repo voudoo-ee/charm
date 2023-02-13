@@ -1,0 +1,41 @@
+.badge_container {
+  position: absolute;
+  left: 0;
+  color: black;
+  z-index: 1
+}
+
+.first_badge {
+  background: #AABA78;
+  @apply text-xl -translate-y-0.5 border-darker text-white transition font-monaSansExtraBoldWide;
+}
+
+.second_badge {
+  @apply first_badge z-20 opacity-0 py-1 pr-1 group-hover:duration-500 group-hover:opacity-100 rounded-br-2xl;
+}
+
+.cart_container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  @apply transition duration-300;
+}
+
+.badge_cart {
+  @apply badge;
+}
+
+.card {
+  display: block;
+  padding: 1rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #AABA78;
+  max-width: 200px;
+  height: 22rem;
+  background: white;
+  font-family: GTWalsheim_Bold, serif;
+  @apply rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300;
+}

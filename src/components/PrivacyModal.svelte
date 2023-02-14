@@ -13,19 +13,11 @@
     <label for="privacyModal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
     <h3 class="text-xl font-monaSansBlackWide text-black font-bold">Privacy Policy</h3>
     <div class="py-2 font-monaSans">
-      This Privacy Policy outlines the ways in which our website (the "Site") collects, uses, maintains, and discloses information from users who visit our site. This policy applies to the Site and all products and services offered by us.
-
+      This Privacy Policy outlines how our website (the "Site") collects, uses, maintains, and discloses information from users who visit our site. We use Google Ads and Cloudflare web analytics to provide the best user experience and relevant content for our visitors.
       <br><br>
       <h1>Information Collection</h1>
 
-      We may collect personal identification information from users when they visit our site, register on the site, place an order, subscribe to our newsletter, respond to a survey, or fill out a form. We may also collect non-personal identification information about users whenever they interact with our site. Non-personal identification information may include the browser name, the type of computer, and technical information about users' means of connection to our site.
-
-      We use Google AdSense to serve advertisements on our Site. Google AdSense uses cookies to provide relevant ads to users based on their visit to our site and other sites on the Internet. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to our Site or other websites. Users may opt-out of personalized advertising by visiting Google's Ads Settings or by visiting the Network Advertising Initiative opt-out page.
-
-      <br><br>
-      <h1>Information Use</h1>
-
-      We may use the information we collect from users to improve our site, personalize user experience, send periodic emails, process transactions, and administer promotions, surveys or other site features. If a user decides to opt-in to our mailing list, they will receive emails that may include company news, updates, related product or service information, etc. If at any time a user would like to unsubscribe from receiving future emails, we include detailed unsubscribe instructions at the bottom of each email.
+      We may collect personal identification information from users when they visit our site. We may also collect non-personal identification information about users whenever they interact with our site. Non-personal identification information may include the browser name, the type of computer, and technical information about users' means of connection to our site.
 
       <br><br>
       <h1>Information Sharing</h1>

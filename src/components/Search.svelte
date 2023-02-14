@@ -29,7 +29,7 @@
 			previousValue = value;
 		}
 
-		const response = await fetch('https://router.grubby.workers.dev/get_product_fuzzy/' + value);
+		const response = await fetch('https://api.voudoo.me/get_product_fuzzy/' + value);
 		products = await response.json();
 		products.forEach((product) => {
 			delete product.ean;

@@ -31,16 +31,6 @@
       ><span class="second_badge">
         {price_difference_percentage}<span class="text-white">%</span>
       </span>
-<!--      <div class="rounded-tl-xl pb-[1px] transition duration-300 group-hover:bg-darker rounded-br-xl">-->
-<!--        <span class="badge rounded-tl-xl rounded-br-xl">-->
-<!--          {price_difference_float}-->
-<!--          <span class="font-sans font-bold">€</span>-->
-<!--        </span>-->
-<!--        <span class="badge_diff opacity-0 group-hover:opacity-100 rounded-br-xl border-l-lighter">-->
-<!--          {price_difference_percentage}-->
-<!--          <span class="font-sans font-bold">%</span>-->
-<!--        </span>-->
-<!--      </div>-->
     </div>
 <!--      <div class="cart-container group">-->
 <!--        <div class="badge_cart rounded-br-xl rounded-tl-xl group-hover:rounded-br-[0.67rem] group-hover:-translate-x-[0.35rem] group-hover:-translate-y-[0.3rem] group-hover:scale-125">-->

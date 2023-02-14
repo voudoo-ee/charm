@@ -1,4 +1,4 @@
-<footer class="footer footer-bg p-10 bg-base-300 flex-1 flex align-middle sm:justify-between sm:px-[30rem] flex-wrap text-base-content">
+<footer class="footer footer-bg p-10 bg-base-300 flex-1 z-10 flex align-middle sm:justify-between sm:px-[30rem] flex-wrap text-base-content">
   <div>
     <span class="footer-title font-monaSansExtraBoldWide">Services</span>
     <a class="link link-hover">Branding</a>

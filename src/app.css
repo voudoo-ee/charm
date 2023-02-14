@@ -16,6 +16,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 html,
 body {
 	max-width: 100%;
+    overflow-x: hidden;
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
@@ -78,10 +79,9 @@ h1 {
 	justify-content: center;
 	flex-wrap: wrap;
 	max-width: 1600px;
-	padding-top: 5rem;
 	gap: 2rem;
 	@apply grid-cols-2 sm:grid-cols-2 md:grid-cols-3
-	lg:grid-cols-5;
+	lg:grid-cols-5 pt-12 md:pt-20;
 	@apply px-4 sm:gap-6 gap-2 mb-24;
 }
 

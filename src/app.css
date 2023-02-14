@@ -3,20 +3,29 @@
 @tailwind utilities;
 
 /* clears the ‘X’ from Internet Explorer */
-input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
-input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+input[type='search']::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type='search']::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
 
 /* clears the ‘X’ from Chrome */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
-
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
+}
 
 html,
 body {
 	max-width: 100%;
-    overflow-x: hidden;
+	overflow-x: hidden;
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
@@ -24,7 +33,8 @@ body {
 		Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-p, span {
+p,
+span {
 	@apply font-monaSans text-superblue;
 }
 
@@ -37,31 +47,31 @@ h1 {
 }
 
 .hover-underline-animation {
-  display: inline-block;
-  position: relative;
+	display: inline-block;
+	position: relative;
 }
 
 .hover-underline-animation::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #AABA78;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #aaba78;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
 }
 
 .hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 .main {
 	background: #fff;
- 	/*background: rgb(255,255,255);*/
+	/*background: rgb(255,255,255);*/
 	/*background: linear-gradient(180deg, rgba(255,255,255,1) 41%, rgba(170,186,120,1) 100%);*/
 	min-height: 100vh;
 	padding: 4rem 0 0;
@@ -86,8 +96,8 @@ h1 {
 }
 
 .footer-bg {
-	background: rgb(255,255,255);
-	background: linear-gradient(350deg, rgba(255,255,255,1) 34%, rgba(170,186,120,1) 100%);
+	background: rgb(255, 255, 255);
+	background: linear-gradient(350deg, rgba(255, 255, 255, 1) 34%, rgba(170, 186, 120, 1) 100%);
 }
 
 .circle {

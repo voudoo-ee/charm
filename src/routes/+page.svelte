@@ -36,27 +36,21 @@
 </h2>
 
 <Search {highlighted} on:message={handleMessage} />
+{#if products.length === 0}
+	<p class="text-lightgrayish font-monaSans text-2xl z-10 pt-32">Ühtegi toodet ei leitud.</p>
+{/if}
 <div class="grid">
 	{#each products as product}
 		<Product {...product} />
 	{/each}
-	{#if products.length === 0}
-		<p class="text-lightgrayish text-black z-10">Ühtegi toodet ei leitud.</p>
-	{/if}
 </div>
 
 <div class="absolute top-[45rem] -translate-x-[42rem] ">
 	{#if products.length > 1}
-		<div
-			class="circle md:-translate-y-[25rem] md:translate-x-32 -translate-x-[10rem] scale-50 md:scale-100"
-		/>
-		<div
-			class="circle md:translate-x-[50rem] md:-translate-y-[10rem] translate-x-12 translate-y-[60rem] scale-50 md:scale-75"
-		/>
+		<div class="circle md:-translate-y-[25rem] md:translate-x-32 -translate-x-[10rem] scale-50 md:scale-100"></div>
+		<div class="circle md:translate-x-[50rem] md:-translate-y-[10rem] translate-x-12 translate-y-[60rem] scale-50 md:scale-75"></div>
 		{#if products.length > 10}
-			<div
-				class="circle md:-translate-x-52 md:translate-y-96 translate-x-24 -translate-y-[70rem] scale-50 md:scale-100"
-			/>
+			<div class="circle md:-translate-x-52 md:translate-y-96 translate-x-24 -translate-y-[70rem] scale-50 md:scale-100"></div>
 		{/if}
 	{/if}
 </div>

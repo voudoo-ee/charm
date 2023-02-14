@@ -14,7 +14,7 @@
 	}
 </script>
 
-<h1 class="font-monaSansExtraBoldWide text-3xl pl-8 md:text-[4rem]">Aitame hoida raha kokku.</h1>
+<h1 class="font-monaSansExtraBoldWide text-3xl pl-8 md:pt-8 md:text-[4rem]">Aitame hoida raha kokku.</h1>
 <h2 class="font-monaSansSemiBold text-xl pl-8 pt-2 md:pt-9 pr-4 md:text-2xl text-lightgrayish z-10">
 	Meie
 	<span on:mouseover={setHighlighted} on:mouseout={setHighlighted} class="font-monaSansSemiBold transition duration-300 hover-underline-animation text-darker">
@@ -22,12 +22,6 @@
 	</span>
 	leiate igale toidupoe tootele kõige odavama hinna.
 </h2>
-<!--<p class="text-lightgrayish text-black z-10">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>-->
-<!--{#if products.length === 0}-->
-<!--	<p class="text-lightgrayish text-black z-10">Loading...</p>-->
-<!--{:else}-->
-<!--	<p class="text-lightgrayish text-black z-10">Here are some products</p>-->
-<!--{/if}-->
 
 <Search {highlighted} on:message={handleMessage} />
 <div class="grid">

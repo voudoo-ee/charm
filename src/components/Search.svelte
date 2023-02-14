@@ -21,7 +21,8 @@
 
     export async function sayHello() {
         let products = [];
-        let value = document.querySelector('input').value
+        let value = document.querySelector('input').value;
+        document.querySelector('input').value = '';
         if (value === previousValue || value.length < 2) {
             return;
         } else {

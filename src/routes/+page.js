@@ -5,7 +5,6 @@ export async function load({ fetch, setHeaders }) {
     const response = await fetch('https://router.grubby.workers.dev/get_random/15');
     products = await response.json();
     products.forEach(product => {
-      delete product.ean;
       delete product.other_ean;
       delete product.category;
     });

@@ -4,7 +4,6 @@
 
 	onMount(() => {
 		if (localStorage.getItem('showCookieConsentModal') === null) {
-			localStorage.setItem('showCookieConsentModal', 'true');
 			document.getElementById('cookieConsent').checked = true;
 		}
 	});
@@ -20,9 +19,7 @@
 		</h3>
 		<p class="pt-4 -mb-2 text-md leading-tight sm:text-lg font-monaSans">
 			Selleks, et saaksid leida kõige odavamad hinnad, kasutame nii enda kui kolmandate osapoolte
-			küpsiseid. Osad neist on vajalikud ning neist ei saa loobuda, teised on valikulised, kuid
-			võimaldavad meil uudiseid kajastada ja teieni tuua. Küpsiseid kasutatakse ka lehe
-			külastatavuse mõõtmiseks ja reklaamide tulemuslikkuse hindamiseks.
+			küpsiseid. Küpsiseid kasutatakse reklaamimiseks ning lehe funktsionaalsuseks.
 			<label for="cookieModal" class="text-darker font-monaSansBoldWide hover-underline-animation"> Lugege veel.</label>
 		</p>
 		<label class="modal-action md:justify-start">

@@ -1,9 +1,12 @@
 <script>
 	import Product from '../components/Product.svelte';
 	import Search from '../components/Search.svelte';
-	import CookieConsent from '../components/CookieConsent.svelte';
-	import PrivacyModal from '../components/PrivacyModal.svelte';
-	import CookieModal from "../components/CookieModal.svelte";
+	import CookieConsent from '../components/modals/CookieConsent.svelte';
+	import PrivacyModal from '../components/modals/PrivacyModal.svelte';
+	import CookieModal from "../components/modals/CookieModal.svelte";
+	import ContactModal from "../components/modals/ContactModal.svelte";
+	import ImagesModal from "../components/modals/ImagesModal.svelte";
+
 	let highlighted = false;
 	export let data;
 	let { products } = data;
@@ -20,6 +23,9 @@
 <CookieConsent />
 <CookieModal />
 <PrivacyModal />
+<ContactModal />
+<ImagesModal />
+<!--TODO maybe add sorting of products?-->
 <h1 class="font-monaSansExtraBoldWide text-3xl pl-8 md:pt-8 md:text-[4rem]">
 	Aitame hoida raha kokku.
 </h1>
@@ -41,7 +47,7 @@
 {/if}
 <div class="grid">
 	{#each products as product}
-		<Product {...product} />
+		<Product {product} />
 	{/each}
 </div>
 

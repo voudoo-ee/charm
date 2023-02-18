@@ -1,0 +1,15 @@
+label div {
+    @apply py-2 font-monaSans;
+}
+
+label h3 {
+    @apply text-xl font-monaSansBoldWide text-black font-bold;
+}
+
+label h1 {
+    @apply pb-1 text-xl font-monaSansBoldWide text-black font-bold;
+}
+
+label div span {
+    @apply text-darker font-monaSansBlack;
+}

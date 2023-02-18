@@ -1,18 +1,13 @@
-<style>
-  h1 {
-    @apply pb-1 text-xl font-monaSansBlackWide text-black;
-  }
-  span {
-    @apply text-darker font-monaSansBlack;
-  }
-</style>
+<script>
+  import './Modal.css'
+</script>
 
 <input type="checkbox" id="privacyModal" class="modal-toggle" />
-<label for="privacyModal" class="modal cursor-pointer">
-  <label class="modal-box relative top-5 cursor-pointer">
+<label for="privacyModal" class="modal">
+  <label class="modal-box relative top-5">
     <label for="privacyModal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-    <h3 class="text-xl font-monaSansBlackWide text-black font-bold">Privacy Policy</h3>
-    <div class="py-2 font-monaSans">
+    <h3>Privacy Policy</h3>
+    <div>
       This Privacy Policy outlines how our website (the "Site") collects, uses, maintains, and discloses information from users who visit our site. We use Google Ads and Cloudflare web analytics to provide the best user experience and relevant content for our visitors.
       <br><br>
       <h1>Information Collection</h1>

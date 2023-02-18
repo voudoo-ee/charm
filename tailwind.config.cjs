@@ -14,7 +14,8 @@ module.exports = {
 				grayish: '#585960',
 				darkish: '#535864',
 				lightgrayish: '#a6adbb',
-				superblue: '#2a303c'
+				superblue: '#2a303c',
+				special: '#ba78aa'
 			},
 			fontFamily: {
 				monaSans: ['Mona-Sans-Regular', 'sans-serif'],

@@ -1,18 +1,13 @@
-<style>
-  h1 {
-    @apply pb-1 text-xl font-monaSansBlackWide text-black;
-  }
-  span {
-    @apply text-darker font-monaSansBlack;
-  }
-</style>
+<script>
+  import './Modal.css'
+</script>
 
 <input type="checkbox" id="cookieModal" class="modal-toggle" />
 <label for="cookieModal" class="modal">
-  <label class="modal-box relative top-5r">
+  <label class="modal-box relative top-5">
     <label for="cookieModal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-    <h3 class="text-xl font-monaSansBlackWide text-black font-bold">Cookie Policy</h3>
-    <div class="py-2 font-monaSans">
+    <h3>Cookie Policy</h3>
+    <div>
         This Cookie Policy explains how our website (the "Site") uses cookies, web beacons, and other similar technologies to collect information about users who visit our site. We use Google AdSense to serve advertisements on our Site. By using the Site, you consent to the use of cookies in accordance with this policy.
 
         <br><br>

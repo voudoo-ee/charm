@@ -6,8 +6,7 @@
 }
 
 .first_badge {
-	background: #aaba78;
-	@apply text-xl -translate-y-0.5 border-darker text-white transition font-monaSansExtraBoldWide;
+	@apply text-xl -translate-y-0.5 text-white transition font-monaSansExtraBoldWide;
 }
 
 .second_badge {
@@ -32,10 +31,19 @@
 	text-align: left;
 	color: inherit;
 	text-decoration: none;
-	border: 1px solid #aaba78;
 	max-width: 200px;
 	height: 22rem;
 	background: white;
 	font-family: GTWalsheim_Bold, serif;
 	@apply rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300;
+}
+
+.default-card {
+	border: 1px solid #aaba78;
+	@apply card;
+}
+
+.special-card {
+	border: 1px solid #ba78aa;
+	@apply card;
 }

@@ -1,29 +1,23 @@
-<script>
-	import CookieConsent from './CookieConsent.svelte';
-	import PrivacyModal from './PrivacyModal.svelte';
-</script>
-
 <footer
 	class="footer footer-bg p-10 bg-base-300 flex-1 z-10 flex align-middle sm:justify-between sm:px-[30rem] flex-wrap text-base-content"
 >
-	<div>
-		<span class="footer-title font-monaSansExtraBoldWide">Services</span>
-		<a class="link link-hover">Branding</a>
-		<a class="link link-hover">Design</a>
-		<a class="link link-hover">Marketing</a>
-		<a class="link link-hover">Advertisement</a>
-	</div>
+<!--	<div>-->
+<!--		<span class="footer-title font-monaSansExtraBoldWide">Services</span>-->
+<!--		<a class="link link-hover">Branding</a>-->
+<!--		<a class="link link-hover">Design</a>-->
+<!--		<a class="link link-hover">Marketing</a>-->
+<!--		<a class="link link-hover">Advertisement</a>-->
+<!--	</div>-->
 	<div>
 		<span class="footer-title font-monaSansExtraBoldWide">Company</span>
 		<a class="link link-hover">About us</a>
-		<a class="link link-hover">Contact</a>
-		<a class="link link-hover">Jobs</a>
-		<a class="link link-hover">Press kit</a>
+		<label for="contactModal"><a class="link link-hover">Contact</a></label>
 	</div>
 	<div>
 		<span class="footer-title font-monaSansExtraBoldWide">Legal</span>
 		<label for="privacyModal"><a class="link link-hover">Privacy<br> Policy</a></label>
 		<label for="cookieModal"><a class="link link-hover">Cookie<br> Policy</a></label>
+		<label for="imagesModal"><a class="link link-hover">Images</a></label>
 	</div>
 	<div>
 		<span class="footer-title font-monaSansExtraBoldWide">Social</span>

@@ -14,8 +14,7 @@
 	<label class="modal-box md:px-[25.3rem]">
 		<h3 class="font-bold text-xl md:text-2xl font-monaSansExtraBoldWide">
 			See veebileht kasutab
-			<span class="text-darker font-monaSansExtraBoldWide hover-underline-animation">küpsiseid</span
-			>
+			<span class="text-darker font-monaSansExtraBoldWide hover-underline-animation">küpsiseid</span>
 		</h3>
 		<p class="pt-4 -mb-2 text-md leading-tight sm:text-lg font-monaSans">
 			Selleks, et saaksid leida kõige odavamad hinnad, kasutame nii enda kui kolmandate osapoolte

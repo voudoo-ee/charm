@@ -8,6 +8,7 @@ export async function load({ fetch, setHeaders }) {
 		delete product.other_ean;
 		delete product.category;
 	});
+	products.sort((a, b) => b.price_difference_float - a.price_difference_float);
 
 	return { products };
 }

@@ -32,10 +32,10 @@
 		const response = await fetch('https://api.voudoo.me/get_product_fuzzy/' + value);
 		products = await response.json();
 		products.forEach((product) => {
-			delete product.ean;
 			delete product.other_ean;
 			delete product.category;
 		});
+		products.sort((a, b) => b.price_difference_float - a.price_difference_float);
 
 		dispatch('message', {
 			products: { products }

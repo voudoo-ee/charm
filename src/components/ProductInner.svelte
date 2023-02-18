@@ -22,7 +22,7 @@
     }
 </script>
 
-<a href={url}>
+<a href={url} target="_blank">
     <img
         class="object-contain -translate-y-5 h-48 w-96 pt-6"
         src={image_url}
@@ -40,9 +40,15 @@
 </div>
 <div class="bottom-0 text-2xl z-0">
     {#if is_discount}
-        <p class="bg-darker inline px-2 py-1 rounded-xl font-monaSansBoldWide text-white">
-            {price}<span class={'font-sans font-bold text-white'}>€</span>
-        </p>
+        {#if price_difference_float === 0}
+            <p class="bg-special inline px-2 py-1 rounded-xl font-monaSansBoldWide text-white">
+                {price}<span class={'font-sans font-bold text-white'}>€</span>
+            </p>
+        {:else}
+            <p class="bg-darker inline px-2 py-1 rounded-xl font-monaSansBoldWide text-white">
+                {price}<span class={'font-sans font-bold text-white'}>€</span>
+            </p>
+        {/if}
     {:else}
         <p class="font-monaSansBoldWide">
             {price}<span class={'font-sans font-bold'}>€</span>

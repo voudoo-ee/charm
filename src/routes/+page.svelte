@@ -46,7 +46,7 @@
 	<p class="text-lightgrayish font-monaSans text-2xl z-10 pt-32">Ühtegi toodet ei leitud.</p>
 {/if}
 <div class="grid">
-	{#each products as product}
+	{#each products as product (product.ean)}
 		<Product {product} />
 	{/each}
 </div>

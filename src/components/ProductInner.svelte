@@ -22,7 +22,7 @@
     }
 </script>
 
-<a href={url} target="_blank">
+<a href={url} rel=noreferrer target="_blank">
     <img
         class="object-contain -translate-y-5 h-48 w-96 pt-6"
         src={image_url}

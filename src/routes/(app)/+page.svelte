@@ -1,11 +1,11 @@
 <script>
-    import Product from "../components/Product.svelte";
-    import Search from "../components/Search.svelte";
-    import CookieConsent from "../components/modals/CookieConsent.svelte";
-    import PrivacyModal from "../components/modals/PrivacyModal.svelte";
-    import CookieModal from "../components/modals/CookieModal.svelte";
-    import ContactModal from "../components/modals/ContactModal.svelte";
-    import ImagesModal from "../components/modals/ImagesModal.svelte";
+    import Product from "../../components/Product.svelte";
+    import Search from "../../components/Search.svelte";
+    import CookieConsent from "../../components/modals/CookieConsent.svelte";
+    import PrivacyModal from "../../components/modals/PrivacyModal.svelte";
+    import CookieModal from "../../components/modals/CookieModal.svelte";
+    import ContactModal from "../../components/modals/ContactModal.svelte";
+    import ImagesModal from "../../components/modals/ImagesModal.svelte";
 
 
     let highlighted = false;
@@ -27,7 +27,7 @@
 <ContactModal />
 <ImagesModal />
 <!--TODO maybe add custom sorting of products?-->
-<h1 class="font-monaSansExtraBoldWide text-3xl pl-8 md:pt-8 md:text-[4rem]">
+<h1 class="font-monaSansExtraBoldWide text-3xl pl-8 md:pt-8 md:text-[4rem] mt-[4rem]">
     Aitame hoida raha kokku.
 </h1>
 <h2 class="font-monaSansSemiBold text-xl pl-8 pt-2 md:pt-9 pr-4 md:text-2xl text-lightgrayish z-10">
@@ -47,7 +47,7 @@
     <p class="text-lightgrayish font-monaSans text-2xl z-10 pt-32">Ühtegi toodet ei leitud.</p>
 {/if}
 <!--<BarcodeScanner />-->
-<div class="grid">
+<div class="product-grid">
     {#each products as product (product.ID)}
         <Product {product} />
     {/each}

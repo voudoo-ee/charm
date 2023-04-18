@@ -25,6 +25,7 @@
 		"@sveltejs/adapter-cloudflare": "^2.0.1",
 		"autoprefixer": "^10.4.13",
 		"daisyui": "^2.50.0",
+		"html5-qrcode": "^2.3.8",
 		"postcss": "^8.4.21",
 		"tailwindcss": "^3.2.6",
 		"undici": "^5.20.0"

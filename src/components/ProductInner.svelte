@@ -1,4 +1,5 @@
 <script>
+    import { shortenName } from "../util.js";
     export let price_difference_percentage;
     export let price_difference_float;
     export let is_age_restricted;
@@ -12,14 +13,6 @@
     export let price;
     export let url;
     export let store;
-    export function shortenName(name) {
-        const LENGTH_TO_CUT = 20;
-        if (name.length > LENGTH_TO_CUT) {
-            return name.slice(0, LENGTH_TO_CUT) + "...";
-        } else {
-            return name;
-        }
-    }
 </script>
 
 <a href={url} rel="noreferrer" target="_blank">

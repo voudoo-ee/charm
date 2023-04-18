@@ -2,6 +2,8 @@
     import "./Product.css";
     import ProductInner from "./ProductInner.svelte";
     export let product;
+    delete product.ID;
+    delete product.category;
 </script>
 
 <div class="group z-10 transition duration-300 relative hover:translate-y-1">

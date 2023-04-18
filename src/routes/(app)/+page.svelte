@@ -7,6 +7,7 @@
     import ContactModal from "../components/modals/ContactModal.svelte";
     import ImagesModal from "../components/modals/ImagesModal.svelte";
 
+
     let highlighted = false;
     export let data;
     let { products } = data;
@@ -45,6 +46,7 @@
 {#if products.length === 0}
     <p class="text-lightgrayish font-monaSans text-2xl z-10 pt-32">Ühtegi toodet ei leitud.</p>
 {/if}
+<!--<BarcodeScanner />-->
 <div class="grid">
     {#each products as product (product.ID)}
         <Product {product} />

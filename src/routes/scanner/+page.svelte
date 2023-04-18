@@ -27,13 +27,17 @@
 	}
 
 	onMount(async () => {
+		// Disable scrolling
+		document.getElementsByTagName("body")[0].style.overflow = "hidden";
+		document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
 		// Redirect non-mobile devices to the home page
 		if (!isMobileUserAgent()) {
 			alert("This page is only available on mobile devices.");
 			goto("/");
 			return;
 		}
-
+		
 		scanner = new Html5Qrcode("qr-reader", { 
 			formatsToSupport: [Html5QrcodeSupportedFormats.EAN_13, Html5QrcodeSupportedFormats.EAN_8]
 		});
@@ -61,13 +65,11 @@
 			<div id="cheapest">
 				
 			</div>
-		{:else if isMobileUserAgent()}
+		{:else}
 			<div class="text-center font-monaSans">
 				Asetage toote vöötkood kaamera keskele.
 			</div>
 		{/if}
 	</div>
-	<div>
-		<div id="qr-reader" style="width: 600px"></div>
-	</div>
+	<div id="qr-reader" class="w-[600px]"></div>
 </div>

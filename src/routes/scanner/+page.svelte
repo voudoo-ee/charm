@@ -39,7 +39,7 @@
 		}
 		
 		scanner = new Html5Qrcode("qr-reader", { 
-			formatsToSupport: [Html5QrcodeSupportedFormats.EAN_13, Html5QrcodeSupportedFormats.EAN_8]
+			formatsToSupport: [Html5QrcodeSupportedFormats.EAN_13, Html5QrcodeSupportedFormats.EAN_8, Html5QrcodeSupportedFormats.CODE_128]
 		});
 
 		scanner.start({ facingMode: "environment" }, config, onScanSuccess);

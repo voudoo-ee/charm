@@ -13,8 +13,14 @@
 		if (cached_ean == decodedText) { return; }
 		cached_ean = decodedText;
 		let cheapest = false;
-
+		
 		getDataFromPlanetary(decodedText).then((data) => {
+			if (data.length == 0) {
+				cached_ean = "";
+				document.getElementById("tip").innerHTML = "Toodet ei leitud.";
+				return;
+			}
+
 			document.getElementById("result-ean").innerHTML = "EAN: " + data[0].ean;
 			document.getElementById("result-name").innerHTML = "Name: " + shortenName(data[0].name, 10);
 			document.getElementById("result-price").innerHTML = "Price: " + data[0].price;
@@ -66,7 +72,7 @@
 				
 			</div>
 		{:else}
-			<div class="text-center font-monaSans">
+			<div class="text-center font-monaSans" id="tip">
 				Asetage toote vöötkood kaamera keskele.
 			</div>
 		{/if}

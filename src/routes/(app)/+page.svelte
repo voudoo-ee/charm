@@ -6,7 +6,9 @@
     import CookieModal from "../../components/modals/CookieModal.svelte";
     import ContactModal from "../../components/modals/ContactModal.svelte";
     import ImagesModal from "../../components/modals/ImagesModal.svelte";
-
+    import { isMobileUserAgent } from "../../util";
+    import { onMount } from "svelte";
+    import Footer from "../../components/Footer.svelte";
 
     let highlighted = false;
     export let data;
@@ -19,6 +21,12 @@
     function handleMessage(event) {
         products = event.detail.products.products;
     }
+
+    onMount(async () => {
+        if (isMobileUserAgent()) {
+            document.querySelector("#scanner-ad").href = "/scanner";
+        }
+    });
 </script>
 
 <CookieConsent />
@@ -49,13 +57,12 @@
     <p class="text-lightgrayish font-monaSans text-2xl z-10 pt-32">Ühtegi toodet ei leitud.</p>
 {/if}
 
-<!-- <div class="info-box">
-    <div class="row-span-2">Kasuta meie uut, veelgi lihtsamat ja kiiremat raha säästmis süsteemi.</div>
-    <div class="col-span-2">02</div>
-    <div class="row-span-2 col-span-2">03</div>
-</div> -->
-
 <div class="product-grid">
+    <a class="info-box col-span-full grid bg-white relative hover:shadow-lg transition hover:translate-y-1" id="scanner-ad">
+        <div class="absolute top-0 right-0 py-1 px-2 text-white font-monaSans bg-darker rounded-bl-md rounded-tr-xl z-10">Beta</div>
+        <div class="font-monaSansSemiBold">Voudoo Ribakoodi Skanneerija! <span class="text-md opacity-0 lg:opacity-50" id="mobile-disclaimer">(Ainult saadaval telefonidel.)</span></div>
+        <div class="font-monaSans align-middle">Kasuta meie uut, veelgi lihtsamat ja kiiremat raha säästmis süsteemi.</div>
+    </a>
     {#each products as product (product.ID)}
         <Product {product} />
     {/each}

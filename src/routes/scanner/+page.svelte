@@ -14,11 +14,11 @@
 		cached_ean = decodedText;
 		let cheapest = false;
 		
-		getDataFromPlanetary(decodedText).then((data) => {
+		getDataFromPlanetary(decodedText).then(async (data) => {
 			if (data.length == 0) {
 				cached_ean = "";
 				document.getElementById("tip").innerHTML = "Toodet ei ole hetkel andmebaasis, saatsime selle teele!";
-				fetch("https://astronaut.grubby.workers.dev/api/v1/add_missing/" + decodedText)
+				await fetch("https://astronaut.grubby.workers.dev/api/v1/add_missing/" + decodedText)
 				return;
 			}
 
@@ -30,7 +30,7 @@
 				cheapest = true;
 			};
 			document.getElementById("cheapest").innerHTML = "Cheapest: " + cheapest;
-		}).setTimeout(3000).then(() => {
+		}).setTimeout(5000).then(() => {
 			cached_ean = "";
 			document.getElementById("tip").innerHTML = "Asetage toote vöötkood kaamera keskele.";
 		});

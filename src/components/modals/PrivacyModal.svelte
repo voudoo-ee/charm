@@ -4,6 +4,7 @@
 
 <input type="checkbox" id="privacyModal" class="modal-toggle" />
 <label for="privacyModal" class="modal">
+    <!-- svelte-ignore a11y-label-has-associated-control -->
     <label class="modal-box relative top-5">
         <label for="privacyModal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
         <h3>Privacy Policy</h3>

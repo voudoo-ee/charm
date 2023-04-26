@@ -9,6 +9,7 @@
 </script>
 
 <input type="checkbox" id="cookieConsent" class="modal-toggle" />
+<!-- svelte-ignore a11y-label-has-associated-control -->
 <label class="modal modal-bottom">
     <label class="modal-box md:px-[25.3rem]">
         <h3 class="font-bold text-xl md:text-2xl font-monaSansExtraBoldWide">
@@ -28,6 +29,7 @@
             >
         </p>
         <label class="modal-action md:justify-start">
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <label
                 for="cookieConsent"
                 on:click={() => {

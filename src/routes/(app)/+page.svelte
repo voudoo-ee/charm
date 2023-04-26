@@ -35,6 +35,8 @@
     <span
         on:mouseover={setHighlighted}
         on:mouseout={setHighlighted}
+        on:blur={setHighlighted}
+        on:focus={setHighlighted}
         class="font-monaSansSemiBold transition duration-300 hover-underline-animation text-darker"
     >
         otsingumootoriga
@@ -46,7 +48,13 @@
 {#if products.length === 0}
     <p class="text-lightgrayish font-monaSans text-2xl z-10 pt-32">Ühtegi toodet ei leitud.</p>
 {/if}
-<!--<BarcodeScanner />-->
+
+<!-- <div class="info-box">
+    <div class="row-span-2">Kasuta meie uut, veelgi lihtsamat ja kiiremat raha säästmis süsteemi.</div>
+    <div class="col-span-2">02</div>
+    <div class="row-span-2 col-span-2">03</div>
+</div> -->
+
 <div class="product-grid">
     {#each products as product (product.ID)}
         <Product {product} />

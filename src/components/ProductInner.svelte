@@ -1,18 +1,14 @@
 <script>
     import { shortenName } from "../util.js";
-    export let price_difference_percentage;
     export let price_difference_float;
-    export let is_age_restricted;
     export let image_url;
     export let name;
-    export let ean;
     export let weight;
     export let unit_price;
     export let brand;
     export let is_discount;
     export let price;
     export let url;
-    export let store;
 </script>
 
 <a href={url} rel="noreferrer" target="_blank">

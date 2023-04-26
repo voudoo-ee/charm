@@ -12,7 +12,7 @@
             <p>
                 All product images originating from servers owned by <span
                     >PRISMA PEREMARKET AS</span
-                >, are being used with permission.
+                > are being used with permission.
             </p>
         </div>
     </label>

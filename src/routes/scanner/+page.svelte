@@ -17,7 +17,8 @@
 		getDataFromPlanetary(decodedText).then((data) => {
 			if (data.length == 0) {
 				cached_ean = "";
-				document.getElementById("tip").innerHTML = "Toodet ei leitud.";
+				document.getElementById("tip").innerHTML = "Toodet ei ole hetkel andmebaasis, saatsime selle teele!";
+				fetch("https://astronaut.grubby.workers.dev/api/v1/add_missing/" + decodedText)
 				return;
 			}
 
@@ -29,6 +30,9 @@
 				cheapest = true;
 			};
 			document.getElementById("cheapest").innerHTML = "Cheapest: " + cheapest;
+		}).setTimeout(3000).then(() => {
+			cached_ean = "";
+			document.getElementById("tip").innerHTML = "Asetage toote vöötkood kaamera keskele.";
 		});
 	}
 
@@ -39,7 +43,6 @@
 
 		// Redirect non-mobile devices to the home page
 		if (!isMobileUserAgent()) {
-			alert("This page is only available on mobile devices.");
 			goto("/");
 			return;
 		}

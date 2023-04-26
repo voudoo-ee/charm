@@ -10,18 +10,24 @@
     <!--	</div>-->
     <div>
         <span class="footer-title font-monaSansExtraBoldWide">Company</span>
+        <!-- svelte-ignore a11y-missing-attribute -->
         <a class="link link-hover">About us</a>
+        <!-- svelte-ignore a11y-missing-attribute -->
         <label for="contactModal"><a class="link link-hover">Contact</a></label>
     </div>
     <div>
         <span class="footer-title font-monaSansExtraBoldWide">Legal</span>
+        <!-- svelte-ignore a11y-missing-attribute -->
         <label for="privacyModal"><a class="link link-hover">Privacy<br /> Policy</a></label>
+        <!-- svelte-ignore a11y-missing-attribute -->
         <label for="cookieModal"><a class="link link-hover">Cookie<br /> Policy</a></label>
+        <!-- svelte-ignore a11y-missing-attribute -->
         <label for="imagesModal"><a class="link link-hover">Images</a></label>
     </div>
     <div>
         <span class="footer-title font-monaSansExtraBoldWide">Social</span>
         <div id="social-icons" class="flex flex-row gap-4">
+            <!-- svelte-ignore a11y-missing-attribute -->
             <a
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -34,6 +40,7 @@
                     /></svg
                 ></a
             >
+            <!-- svelte-ignore a11y-missing-attribute -->
             <a
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +53,7 @@
                     /></svg
                 ></a
             >
+            <!-- svelte-ignore a11y-missing-attribute -->
             <a
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"

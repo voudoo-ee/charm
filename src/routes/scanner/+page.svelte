@@ -7,6 +7,7 @@
 	
 	const config = { fps: 5, qrbox: { width: 250, height: 250 } };
 	var cached_ean = "";
+	var tip_text = "Asetage toote vöötkood kaamera keskele.";
 	var scanner;
 
 	function onScanSuccess(decodedText) {
@@ -17,7 +18,8 @@
 		getDataFromPlanetary(decodedText).then(async (data) => {
 			if (data.length == 0) {
 				cached_ean = "";
-				document.getElementById("tip").innerHTML = "Toodet ei ole hetkel andmebaasis, saatsime selle teele!";
+				tip_text = "Toodet ei ole hetkel andmebaasis, saatsime selle teele!";
+				console.log("Sending " + decodedText + " to the server.")
 				await fetch("https://astronaut.grubby.workers.dev/api/v1/add_missing/" + decodedText)
 				return;
 			}
@@ -32,7 +34,7 @@
 			document.getElementById("cheapest").innerHTML = "Cheapest: " + cheapest;
 		}).setTimeout(5000).then(() => {
 			cached_ean = "";
-			document.getElementById("tip").innerHTML = "Asetage toote vöötkood kaamera keskele.";
+			tip_text = "Asetage toote vöötkood kaamera keskele.";
 		});
 	}
 
@@ -71,12 +73,10 @@
 				<span id="result-price"></span>
 				<span id="result-store"></span>
 			</div>
-			<div id="cheapest">
-				
-			</div>
+			<div id="cheapest" />
 		{:else}
 			<div class="text-center font-monaSans" id="tip">
-				Asetage toote vöötkood kaamera keskele.
+				{tip_text}
 			</div>
 		{/if}
 	</div>

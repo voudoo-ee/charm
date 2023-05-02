@@ -7,6 +7,7 @@
 
     const config = { fps: 5, qrbox: { width: 250, height: 250 } };
     var cached_ean = "";
+    var selected_store = "";
     var tip_text = "Asetage toote vöötkood kaamera keskele.";
     var scanner;
 
@@ -23,7 +24,7 @@
                 cached_ean = "";
                 tip_text = "Toodet ei ole hetkel andmebaasis, saatsime selle teele!";
                 await fetch(
-                    "https://astronaut.grubby.workers.dev/api/v1/add_missing/" + decodedText
+                    `https://astronaut.grubby.workers.dev/api/v1/add_missing/${decodedText}/${selected_store}`
                 );
                 return;
             }
@@ -61,7 +62,14 @@
             goto("/");
             return;
         }
+    });
 
+    function selectStore(store) {
+        selected_store = store;
+        startScanner();
+    }
+
+    function startScanner() {
         scanner = new Html5Qrcode("qr-reader", {
             formatsToSupport: [
                 Html5QrcodeSupportedFormats.EAN_13,
@@ -71,16 +79,17 @@
         });
 
         scanner.start({ facingMode: "environment" }, config, onScanSuccess);
-    });
-
+    }
     async function getDataFromPlanetary(ean) {
-        const response = await fetch("https://astronaut.grubby.workers.dev/api/v1/get_ean/" + ean);
+        const response = await fetch(
+            `https://astronaut.grubby.workers.dev/api/v1/get_ean/${ean}/${selected_store}`
+        );
         const data = await response.json();
         return data;
     }
 </script>
 
-<div>
+<div class="bg-green">
     <div class="absolute left-0 top-0 bg-white w-[100vw] z-20 p-2 rounded-b-2xl">
         {#if cached_ean != ""}
             <div class="grid grid-cols-2 grid-rows-2 mb-0 mt-0">
@@ -91,9 +100,23 @@
                 <span id="result-store" />
             </div>
             <div id="cheapest" class="font-monaSans text-center mt-2" />
-        {:else}
+        {:else if selected_store != ""}
             <div class="text-center font-monaSans" id="tip">
                 {tip_text}
+            </div>
+        {:else}
+            <div class="text-center font-monaSans" id="tip">
+                Valige pood, milles toodet otsite.
+                <div>
+                    {#each ["Selver", "Prisma"] as store}
+                        <button
+                            class="bg-darker text-white rounded-lg p-2 m-2 transition hover:translate-y-0.5"
+                            on:click={() => {
+                                selectStore(store);
+                            }}>{store}</button
+                        >
+                    {/each}
+                </div>
             </div>
         {/if}
     </div>

@@ -34,17 +34,6 @@
             </div>
         {/if}
 
-        <!--      <div class="cart-container group">-->
-        <!--        <div class="badge_cart rounded-br-xl rounded-tl-xl group-hover:rounded-br-[0.67rem] group-hover:-translate-x-[0.35rem] group-hover:-translate-y-[0.3rem] group-hover:scale-125">-->
-        <!--          <svg xmlns="http://www.w3.org/2000/svg" width="32"-->
-        <!--               height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"-->
-        <!--               stroke-linecap="round" stroke-linejoin="round">-->
-        <!--            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>-->
-        <!--            <line x1="12" y1="5" x2="12" y2="19"></line>-->
-        <!--            <line x1="5" y1="12" x2="19" y2="12"></line>-->
-        <!--          </svg>-->
-        <!--        </div>-->
-        <!--      </div>-->
         {#if product.price_difference_float === 0}
             <div class="special-card">
                 <ProductInner {...product} />

@@ -58,15 +58,19 @@
         document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
         // Redirect non-mobile devices to the home page
-        if (!isMobileUserAgent()) {
-            goto("/");
-            return;
-        }
+        // if (!isMobileUserAgent()) {
+        //     goto("/");
+        //     return;
+        // }
     });
 
     function selectStore(store) {
-        selected_store = store;
-        startScanner();
+        document.getElementById("store-selection").classList.add("fade-out");
+        setTimeout(() => {
+            selected_store = store;
+            document.getElementById("qr-reader").classList.add("fade-in");
+            startScanner();
+        }, 1000);
     }
 
     function startScanner() {
@@ -101,24 +105,25 @@
             </div>
             <div id="cheapest" class="font-monaSans text-center mt-2" />
         {:else if selected_store != ""}
-            <div class="text-center font-monaSans" id="tip">
+            <div class="text-center font-monaSans fade-in" id="tip">
                 {tip_text}
-            </div>
-        {:else}
-            <div class="text-center font-monaSans" id="tip">
-                Valige pood, milles toodet otsite.
-                <div>
-                    {#each ["Selver", "Prisma"] as store}
-                        <button
-                            class="bg-darker text-white rounded-lg p-2 m-2 transition hover:translate-y-0.5"
-                            on:click={() => {
-                                selectStore(store);
-                            }}>{store}</button
-                        >
-                    {/each}
-                </div>
             </div>
         {/if}
     </div>
+    {#if selected_store == ""}
+        <div class="top-[42vh] text-center font-monaSans " id="store-selection">
+            Valige pood, milles toodet otsite.
+            <div>
+                {#each ["Selver", "Prisma"] as store}
+                    <button
+                        class="bg-darker text-white rounded-lg p-2 m-2 transition hover:translate-y-0.5 focus:fade-out"
+                        on:click={() => {
+                            selectStore(store);
+                        }}>{store}</button
+                    >
+                {/each}
+            </div>
+        </div>
+    {/if}
     <div id="qr-reader" class="w-[600px] -translate-y-3" />
 </div>

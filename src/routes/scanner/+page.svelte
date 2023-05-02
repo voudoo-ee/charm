@@ -58,10 +58,10 @@
         document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
         // Redirect non-mobile devices to the home page
-        // if (!isMobileUserAgent()) {
-        //     goto("/");
-        //     return;
-        // }
+        if (!isMobileUserAgent()) {
+            goto("/");
+            return;
+        }
     });
 
     function selectStore(store) {
@@ -111,7 +111,7 @@
         {/if}
     </div>
     {#if selected_store == ""}
-        <div class="top-[42vh] text-center font-monaSans " id="store-selection">
+        <div class="text-center font-monaSans " id="store-selection">
             Valige pood, milles toodet otsite.
             <div>
                 {#each ["Selver", "Prisma"] as store}

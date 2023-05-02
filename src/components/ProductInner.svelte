@@ -8,20 +8,17 @@
     export let brand;
     export let is_discount;
     export let price;
-    export let url;
 </script>
 
-<a href={url} rel="noreferrer" target="_blank">
-    <img
-        class="object-contain -translate-y-5 h-48 w-96 pt-6"
-        src={image_url}
-        decoding="async"
-        loading="lazy"
-        width={200}
-        height={200}
-        alt={name}
-    />
-</a>
+<img
+    class="object-contain -translate-y-5 h-48 w-96 pt-6"
+    src={image_url}
+    decoding="async"
+    loading="lazy"
+    width={200}
+    height={200}
+    alt={name}
+/>
 <h2 class="font-monaSansMedium text-superblue">{shortenName(name)}</h2>
 <div class="opacity-50">
     <p class="text-sm">{weight} / {unit_price}€</p>

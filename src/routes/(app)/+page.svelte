@@ -59,7 +59,7 @@
 {/if}
 
 <div class="product-grid">
-    {#if !searched}
+    {#if !searched && products.length > 1}
         <a
             class="info-box col-span-full grid bg-white relative hover:shadow-lg transition hover:translate-y-1"
             id="scanner-ad"

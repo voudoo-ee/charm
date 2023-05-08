@@ -14,7 +14,7 @@
         <a class="link link-hover">About us</a>
         <!-- svelte-ignore a11y-missing-attribute -->
         <label for="contactModal"><a class="link link-hover">Contact</a></label>
-        <a class="link link-hover" href="https://status.voudoo.me/">Status</a>
+        <a class="link link-hover" href="https://status.voudoo.live/">Status</a>
     </div>
     <div>
         <span class="footer-title font-monaSansExtraBoldWide">Legal</span>

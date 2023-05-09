@@ -36,17 +36,17 @@
 <ContactModal />
 <ImagesModal />
 <!--TODO maybe add custom sorting of products?-->
-<h1 class="font-monaSansExtraBoldWide text-3xl pl-8 md:pt-8 md:text-[4rem] mt-[4rem]">
+<h1 class="mt-[4rem] pl-8 font-monaSansExtraBoldWide text-3xl md:pt-8 md:text-[4rem]">
     Aitame hoida raha kokku.
 </h1>
-<h2 class="font-monaSansSemiBold text-xl pl-8 pt-2 md:pt-9 pr-4 md:text-2xl text-lightgrayish z-10">
+<h2 class="z-10 pl-8 pt-2 pr-4 font-monaSansSemiBold text-xl text-lightgrayish md:pt-9 md:text-2xl">
     Meie
     <span
         on:mouseover={setHighlighted}
         on:mouseout={setHighlighted}
         on:blur={setHighlighted}
         on:focus={setHighlighted}
-        class="font-monaSansSemiBold transition duration-300 hover-underline-animation text-darker"
+        class="hover-underline-animation font-monaSansSemiBold text-darker transition duration-300"
     >
         otsingumootoriga
     </span>
@@ -55,17 +55,17 @@
 
 <Search {highlighted} on:message={handleMessage} />
 {#if products.length === 0}
-    <p class="text-lightgrayish font-monaSans text-2xl z-10 pt-32">Ühtegi toodet ei leitud.</p>
+    <p class="z-10 pt-32 font-monaSans text-2xl text-lightgrayish">Ühtegi toodet ei leitud.</p>
 {/if}
 
 <div class="product-grid">
     {#if !searched && products.length > 1}
         <a
-            class="info-box col-span-full grid bg-white relative hover:shadow-lg transition hover:translate-y-1"
+            class="info-box relative col-span-full grid bg-white transition hover:translate-y-1 hover:shadow-lg"
             id="scanner-ad"
         >
             <div
-                class="absolute top-0 right-0 py-1 px-2 text-white font-monaSans bg-darker rounded-bl-md rounded-tr-xl z-10"
+                class="absolute top-0 right-0 z-10 rounded-bl-md rounded-tr-xl bg-darker py-1 px-2 font-monaSans text-white"
             >
                 Beta
             </div>
@@ -75,7 +75,7 @@
                     id="mobile-disclaimer">(Ainult saadaval telefonidel.)</span
                 >
             </div>
-            <div class="font-monaSans align-middle">
+            <div class="align-middle font-monaSans">
                 Kasuta meie uut, veelgi lihtsamat ja kiiremat raha säästmis süsteemi.
             </div>
         </a>
@@ -88,14 +88,14 @@
 <div class="absolute top-[45rem] -translate-x-[42rem] ">
     {#if products.length > 1}
         <div
-            class="circle md:-translate-y-[25rem] md:translate-x-32 -translate-x-[10rem] scale-50 md:scale-100"
+            class="circle z-0 -translate-x-[10rem] scale-50 bg-darker opacity-40 blur-3xl md:-translate-y-[25rem] md:translate-x-32 md:scale-100"
         />
         <div
-            class="circle md:translate-x-[50rem] md:-translate-y-[10rem] translate-x-12 translate-y-[60rem] scale-50 md:scale-75"
+            class="circle z-0 translate-x-12 translate-y-[60rem] scale-50 bg-darker opacity-40 blur-3xl md:translate-x-[50rem] md:-translate-y-[10rem] md:scale-75"
         />
         {#if products.length > 10}
             <div
-                class="circle md:-translate-x-52 md:translate-y-96 translate-x-24 -translate-y-[70rem] scale-50 md:scale-100"
+                class="circle z-0 translate-x-24 -translate-y-[70rem] scale-50 bg-darker opacity-40 blur-3xl md:-translate-x-52 md:translate-y-96 md:scale-100"
             />
         {/if}
     {/if}

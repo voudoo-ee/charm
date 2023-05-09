@@ -3,13 +3,13 @@ label div {
 }
 
 label h3 {
-    @apply text-xl font-monaSansBoldWide text-black font-bold;
+    @apply font-monaSansBoldWide text-xl font-bold text-black;
 }
 
 label h1 {
-    @apply pb-1 text-xl font-monaSansBoldWide text-black font-bold;
+    @apply pb-1 font-monaSansBoldWide text-xl font-bold text-black;
 }
 
 label div span {
-    @apply text-darker font-monaSansBlack;
+    @apply font-monaSansBlack text-darker;
 }

@@ -32,7 +32,9 @@
             previousValue = value;
         }
 
-        const response = await fetch("https://astronaut.grubby.workers.dev/api/v1/get_fuzzy/" + value);
+        const response = await fetch(
+            "https://astronaut.grubby.workers.dev/api/v1/get_fuzzy/" + value
+        );
         products = await response.json();
         products.sort((a, b) => b.price_difference_float - a.price_difference_float);
 
@@ -44,20 +46,20 @@
 
 <div class="pt-8 md:pt-16">
     <form
-        class="form-control group relative"
+        class="group form-control relative"
         on:submit|preventDefault={sendMessage}
         on:focusout={sendMessage}
         action=""
     >
-        <div class="translate-y-7 right-[3.3rem] bottom-[3.5rem] z-30 absolute bg-white">
-            <div class="el transition opacity-0 group-focus-within:opacity-100 duration-300" />
-            <div class="el transition opacity-0 group-focus-within:opacity-100 duration-500" />
-            <div class="el transition opacity-0 group-focus-within:opacity-100 duration-1000" />
+        <div class="absolute right-[3.3rem] bottom-[3.5rem] z-30 translate-y-7 bg-white">
+            <div class="el opacity-0 transition duration-300 group-focus-within:opacity-100" />
+            <div class="el opacity-0 transition duration-500 group-focus-within:opacity-100" />
+            <div class="el opacity-0 transition duration-1000 group-focus-within:opacity-100" />
         </div>
         <div
-            class="lg:opacity-0 opacity-100 bg-white w-16 rounded-r-2xl h-10 absolute z-20 bottom-1 right-1"
+            class="absolute bottom-1 right-1 z-20 h-10 w-16 rounded-r-2xl bg-white opacity-100 lg:opacity-0"
         />
-        <div class="highlighted shadow-2xl opacity-0" />
+        <div class="highlighted opacity-0 shadow-2xl" />
         <input
             id="searchBox"
             type="text"
@@ -65,7 +67,7 @@
             pattern={raw_regex}
             minLength={1}
             maxLength={35}
-            class="input font-monaSans rounded-2xl w-72 md:w-[24.5rem] input-bordered focus:outline-0 z-10 focus:shadow-xl"
+            class="input-bordered input z-10 w-72 rounded-2xl font-monaSans focus:shadow-xl focus:outline-0 md:w-[24.5rem]"
         />
     </form>
 </div>

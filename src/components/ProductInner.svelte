@@ -11,7 +11,7 @@
 </script>
 
 <img
-    class="object-contain -translate-y-5 h-48 w-96 pt-6"
+    class="h-48 w-96 -translate-y-5 object-contain pt-6"
     src={image_url}
     decoding="async"
     loading="lazy"
@@ -24,14 +24,14 @@
     <p class="text-sm">{weight} / {unit_price}€</p>
     <p class="text-sm">{brand}</p>
 </div>
-<div class="bottom-0 text-2xl z-0">
+<div class="bottom-0 z-0 text-2xl">
     {#if is_discount}
         {#if price_difference_float === 0}
-            <p class="bg-special inline px-2 py-1 rounded-xl font-monaSansBoldWide text-white">
+            <p class="inline rounded-xl bg-special px-2 py-1 font-monaSansBoldWide text-white">
                 {price}<span class={"font-sans font-bold text-white"}>€</span>
             </p>
         {:else}
-            <p class="bg-darker inline px-2 py-1 rounded-xl font-monaSansBoldWide text-white">
+            <p class="inline rounded-xl bg-darker px-2 py-1 font-monaSansBoldWide text-white">
                 {price}<span class={"font-sans font-bold text-white"}>€</span>
             </p>
         {/if}

@@ -12,18 +12,18 @@
 <!-- svelte-ignore a11y-label-has-associated-control -->
 <label class="modal modal-bottom">
     <label class="modal-box md:px-[25.3rem]">
-        <h3 class="font-bold text-xl md:text-2xl font-monaSansExtraBoldWide">
+        <h3 class="font-monaSansExtraBoldWide text-xl font-bold md:text-2xl">
             See veebileht kasutab
-            <span class="text-darker font-monaSansExtraBoldWide hover-underline-animation"
+            <span class="hover-underline-animation font-monaSansExtraBoldWide text-darker"
                 >küpsiseid</span
             >
         </h3>
-        <p class="pt-4 -mb-2 text-md leading-tight sm:text-lg font-monaSans">
+        <p class="text-md -mb-2 pt-4 font-monaSans leading-tight sm:text-lg">
             Selleks, et saaksid leida kõige odavamad hinnad, kasutame nii enda kui kolmandate
             osapoolte küpsiseid. Küpsiseid kasutatakse reklaamimiseks ning lehe funktsionaalsuseks.
             <label
                 for="cookieModal"
-                class="text-darker font-monaSansBoldWide hover-underline-animation"
+                class="hover-underline-animation font-monaSansBoldWide text-darker"
             >
                 Lugege veel.</label
             >
@@ -35,7 +35,7 @@
                 on:click={() => {
                     localStorage.setItem("showCookieConsentModal", "false");
                 }}
-                class="btn bg-darker normal-case tracking-wide hover:bg-evendarker border-none font-monaSansMedium"
+                class="btn border-none bg-darker font-monaSansMedium normal-case tracking-wide hover:bg-evendarker"
                 >Luban küpsiste kasutust</label
             >
         </label>

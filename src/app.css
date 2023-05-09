@@ -125,13 +125,13 @@ img {
     flex-wrap: wrap;
     max-width: 1600px;
     gap: 2rem;
-    @apply grid-cols-2 sm:grid-cols-2 md:grid-cols-3
-	lg:grid-cols-5 pt-2.5 md:pt-10 px-4 sm:gap-6 gap-2 mb-24;
+    @apply mb-24 grid-cols-2 gap-2
+	px-4 pt-2.5 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 md:pt-10 lg:grid-cols-5;
 }
 
 .info-box {
-    @apply container z-10 grid grid-rows-2
-     grid-flow-col p-4 mt-12 border-darker border rounded-2xl;
+    @apply container z-10 mt-12 grid
+     grid-flow-col grid-rows-2 rounded-2xl border border-darker p-4;
 }
 
 .footer-bg {
@@ -144,11 +144,6 @@ img {
     width: 30rem;
     border-radius: 50%;
     position: absolute;
-    @apply bg-darker blur-3xl opacity-40 z-0;
-}
-
-.social-icons a svg path {
-    @apply hover:scale-125;
 }
 
 @media (max-width: 600px) {

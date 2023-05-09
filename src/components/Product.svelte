@@ -6,40 +6,48 @@
     delete product.category;
 </script>
 
-<div class="group z-10 transition duration-300 relative hover:translate-y-1">
+<div class="group relative z-10 transition duration-300 hover:translate-y-1">
     <a href={product.url} target="_blank" rel="noreferrer">
         {#if product.price_difference_float === 0}
             <div
-                class="absolute z-20 rounded-tl-xl transition duration-300 border-r-lighter group-hover:bg-special rounded-br-xl inline"
+                class="absolute z-20 inline rounded-tl-xl rounded-br-xl border-r-lighter transition duration-300 group-hover:bg-special"
             >
                 <span
-                    class="first_badge border-special bg-special rounded-tl-xl p-1 px-2 rounded-br-xl rounded-tr-none rounded-bl-none"
+                    class="-translate-y-0.5 rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none border-special bg-special p-1 px-2 font-monaSansExtraBoldWide text-xl text-white transition"
                 >
                     {product.price_difference_float}<span class="text-white">€</span></span
-                ><span class="second_badge">
+                ><span
+                    class="z-20 rounded-br-2xl py-1 pr-1 font-monaSansExtraBoldWide text-xl text-white opacity-0 group-hover:opacity-100 group-hover:duration-500"
+                >
                     {product.price_difference_percentage}<span class="text-white">%</span>
                 </span>
             </div>
         {:else}
             <div
-                class="absolute z-20 rounded-tl-xl transition duration-300 border-r-lighter group-hover:bg-darker rounded-br-xl inline"
+                class="absolute z-20 inline rounded-tl-xl rounded-br-xl border-r-lighter transition duration-300 group-hover:bg-darker"
             >
                 <span
-                    class="first_badge border-darker bg-darker rounded-tl-xl p-1 px-2 rounded-br-xl rounded-tr-none rounded-bl-none"
+                    class="-translate-y-0.5 rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none border-darker bg-darker p-1 px-2 font-monaSansExtraBoldWide text-xl text-white transition"
                 >
                     {product.price_difference_float}<span class="text-white">€</span></span
-                ><span class="second_badge">
+                ><span
+                    class="z-20 rounded-br-2xl py-1 pr-1 font-monaSansExtraBoldWide text-xl text-white opacity-0 group-hover:opacity-100 group-hover:duration-500"
+                >
                     {product.price_difference_percentage}<span class="text-white">%</span>
                 </span>
             </div>
         {/if}
 
         {#if product.price_difference_float === 0}
-            <div class="special-card">
+            <div
+                class="special-card rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl"
+            >
                 <ProductInner {...product} />
             </div>
         {:else}
-            <div class="default-card">
+            <div
+                class="default-card rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl"
+            >
                 <ProductInner {...product} />
             </div>
         {/if}

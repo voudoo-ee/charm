@@ -6,7 +6,7 @@
 <label for="privacyModal" class="modal">
     <!-- svelte-ignore a11y-label-has-associated-control -->
     <label class="modal-box relative top-5">
-        <label for="privacyModal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+        <label for="privacyModal" class="btn-sm btn-circle btn absolute right-2 top-2">✕</label>
         <h3>Privacy Policy</h3>
         <div>
             This Privacy Policy outlines how our website (the "Site") collects, uses, maintains, and
@@ -48,7 +48,7 @@
             <h1>Contacting us</h1>
 
             If you have any questions about this Privacy Policy, the practices of this Site, or your
-            dealings with this Site, please contact us at <span>kadirklade[at]protonmail.com</span>.
+            dealings with this Site, please contact us at<span>kadirklade[at]protonmail.com</span>.
 
             <br /><br />
             This document was last updated on 2/14/2023.

@@ -1,7 +1,7 @@
-<style>
-	slot {
-  	overflow: hidden
-	}
-</style>
-
 <slot />
+
+<style>
+    slot {
+        overflow: hidden;
+    }
+</style>

@@ -6,7 +6,7 @@
 <label for="imagesModal" class="modal">
     <!-- svelte-ignore a11y-label-has-associated-control -->
     <label class="modal-box relative top-5">
-        <label for="imagesModal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+        <label for="imagesModal" class="btn-sm btn-circle btn absolute right-2 top-2">✕</label>
         <h3 class="font-monaSansBoldWide">Image Copyright Disclaimer</h3>
         <div>
             <p>

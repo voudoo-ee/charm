@@ -94,18 +94,18 @@
 </script>
 
 <div class="bg-green">
-    <div class="absolute left-0 top-0 bg-white w-[100vw] z-20 p-2 rounded-b-2xl">
+    <div class="absolute left-0 top-0 z-20 w-[100vw] rounded-b-2xl bg-white p-2">
         {#if cached_ean != ""}
-            <div class="grid grid-cols-2 grid-rows-2 mb-0 mt-0">
+            <div class="mb-0 mt-0 grid grid-cols-2 grid-rows-2">
                 <!--	create a 2x2 grid here	-->
                 <span id="result-name" />
                 <span id="result-ean" />
                 <span id="result-price" />
                 <span id="result-store" />
             </div>
-            <div id="cheapest" class="font-monaSans text-center mt-2" />
+            <div id="cheapest" class="mt-2 text-center font-monaSans" />
         {:else if selected_store != ""}
-            <div class="text-center font-monaSans fade-in" id="tip">
+            <div class="fade-in text-center font-monaSans" id="tip">
                 {tip_text}
             </div>
         {/if}
@@ -116,7 +116,7 @@
             <div>
                 {#each ["Selver", "Prisma"] as store}
                     <button
-                        class="bg-darker text-white rounded-lg p-2 m-2 transition hover:translate-y-0.5 focus:fade-out"
+                        class="focus:fade-out m-2 rounded-lg bg-darker p-2 text-white transition hover:translate-y-0.5"
                         on:click={() => {
                             selectStore(store);
                         }}>{store}</button

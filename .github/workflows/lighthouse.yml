@@ -9,7 +9,10 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: 18
-            - run: npm install && npm install -g @lhci/cli
-            - run: lhci autorun
+            - run: npm install
+            - run: yarn run lhci:mobile
+              env:
+                  LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+            - run: yarn run lhci:desktop
               env:
                   LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

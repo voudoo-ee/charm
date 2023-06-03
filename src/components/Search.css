@@ -27,7 +27,7 @@
 }
 
 .highlighted {
-    @apply absolute h-[3.25rem] w-[18.25rem] -translate-y-0.5 -translate-x-0.5 rounded-2xl bg-darker transition duration-300 md:w-[24.75rem];
+    @apply absolute h-[3.25rem] w-[18.25rem] -translate-x-0.5 -translate-y-0.5 rounded-2xl bg-darker transition duration-300 md:w-[24.75rem];
 }
 
 @keyframes go {

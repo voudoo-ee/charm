@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Matches {
+  ID                          Int      @id @default(autoincrement())
+  EAN                         BigInt   @db.UnsignedBigInt
+  name                        String   @db.VarChar(255)
+  brand                       String   @db.VarChar(255)
+  category                    String?  @db.VarChar(255)
+  image_url                   String?  @default("https://www.prismamarket.ee/images/entry_no_image_170.png") @db.VarChar(255)
+  is_age_restricted           Boolean? @default(false)
+  is_discount                 Boolean? @default(false)
+  price                       Float    @db.Float
+  store                       String   @db.VarChar(255)
+  unit_price                  Float    @db.Float
+  url                         String   @db.VarChar(255)
+  weight                      String   @db.VarChar(255)
+  other_ean                   BigInt?  @db.UnsignedBigInt
+  price_difference_float      Float?   @db.Float
+  price_difference_percentage Int?
+
+  @@index([name, brand], map: "fulltext")
+  @@index([price_difference_percentage], map: "idx_matches_price_diff_percentage")
+}
+
+model Missing {
+  ID        Int       @id @default(autoincrement())
+  EAN       BigInt    @unique(map: "EAN") @db.UnsignedBigInt
+  timestamp DateTime? @default(now()) @db.Timestamp(0)
+  store     String    @db.VarChar(255)
+}
+
+model Products {
+  ID                          Int      @id @default(autoincrement())
+  EAN                         BigInt   @db.UnsignedBigInt
+  name                        String   @db.VarChar(255)
+  brand                       String   @db.VarChar(255)
+  category                    String?  @db.VarChar(255)
+  image_url                   String?  @default("https://www.prismamarket.ee/images/entry_no_image_170.png") @db.VarChar(255)
+  is_age_restricted           Boolean? @default(false)
+  is_discount                 Boolean? @default(false)
+  price                       Float    @db.Float
+  store                       String   @db.VarChar(255)
+  unit_price                  Float    @db.Float
+  url                         String   @db.VarChar(255)
+  weight                      String   @db.VarChar(255)
+  other_ean                   BigInt?  @db.UnsignedBigInt
+  price_difference_float      Float    @default(0) @db.Float
+  price_difference_percentage Int      @default(0) @db.TinyInt
+  disregard                   Boolean  @default(false)
+
+  @@index([name, brand], map: "fulltext")
+  @@index([EAN, store, other_ean], map: "index_search")
+}

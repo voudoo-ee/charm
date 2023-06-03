@@ -8,7 +8,7 @@
     let mounted = false;
     let previousValue = "";
     const dispatch = createEventDispatcher();
-    const raw_regex = `[a-zA-Z0-9]{2,}[ '"]{0,}[a-zA-Z0-9]{1,}`;
+    const raw_regex = `[a-zA-Z0-9õÕüÜöÖäÄ]{2,}[ '"]{0,}[a-zA-Z0-9ÕüÜöÖäÄ]{1,}`;
 
     onMount(async () => {
         mounted = true;
@@ -51,7 +51,7 @@
         on:focusout={sendMessage}
         action=""
     >
-        <div class="absolute right-[3.3rem] bottom-[3.5rem] z-30 translate-y-7 bg-white">
+        <div class="absolute bottom-[3.5rem] right-[3.3rem] z-30 translate-y-7 bg-white">
             <div class="el opacity-0 transition duration-300 group-focus-within:opacity-100" />
             <div class="el opacity-0 transition duration-500 group-focus-within:opacity-100" />
             <div class="el opacity-0 transition duration-1000 group-focus-within:opacity-100" />

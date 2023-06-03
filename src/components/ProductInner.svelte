@@ -1,5 +1,5 @@
 <script>
-    import { shortenName } from "../util.js";
+    import { shortenName } from "../lib/util.js";
     export let price_difference_float;
     export let image_url;
     export let name;

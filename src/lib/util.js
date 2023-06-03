@@ -11,3 +11,8 @@ export function isMobileUserAgent() {
         navigator.userAgent
     );
 }
+
+export function randomPick(choices) {
+    const args = Array.from(choices);
+    return args[Math.floor(Math.random() * args.length)];
+}

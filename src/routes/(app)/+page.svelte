@@ -6,13 +6,13 @@
     import CookieModal from "../../components/modals/CookieModal.svelte";
     import ContactModal from "../../components/modals/ContactModal.svelte";
     import ImagesModal from "../../components/modals/ImagesModal.svelte";
-    import { isMobileUserAgent } from "../../util";
+    import { isMobileUserAgent } from "$lib/util.js";
     import { onMount } from "svelte";
 
     export let data;
     let highlighted = false;
     let searched = false;
-    let { products } = data;
+    let products = data.feed;
 
     function setHighlighted() {
         highlighted = !highlighted;
@@ -39,7 +39,7 @@
 <h1 class="mt-[4rem] pl-8 font-monaSansExtraBoldWide text-3xl md:pt-8 md:text-[4rem]">
     Aitame hoida raha kokku.
 </h1>
-<h2 class="z-10 pl-8 pt-2 pr-4 font-monaSansSemiBold text-xl text-lightgrayish md:pt-9 md:text-2xl">
+<h2 class="z-10 pl-8 pr-4 pt-2 font-monaSansSemiBold text-xl text-lightgrayish md:pt-9 md:text-2xl">
     Meie
     <span
         on:mouseover={setHighlighted}
@@ -65,7 +65,7 @@
             id="scanner-ad"
         >
             <div
-                class="absolute top-0 right-0 z-10 rounded-bl-md rounded-tr-xl bg-darker py-1 px-2 font-monaSans text-white"
+                class="absolute right-0 top-0 z-10 rounded-bl-md rounded-tr-xl bg-darker px-2 py-1 font-monaSans text-white"
             >
                 Beta
             </div>
@@ -85,17 +85,17 @@
     {/each}
 </div>
 
-<div class="absolute top-[45rem] -translate-x-[42rem] ">
+<div class="absolute top-[45rem] -translate-x-[42rem]">
     {#if products.length > 1}
         <div
             class="circle z-0 -translate-x-[10rem] scale-50 bg-darker opacity-40 blur-3xl md:-translate-y-[25rem] md:translate-x-32 md:scale-100"
         />
         <div
-            class="circle z-0 translate-x-12 translate-y-[60rem] scale-50 bg-darker opacity-40 blur-3xl md:translate-x-[50rem] md:-translate-y-[10rem] md:scale-75"
+            class="circle z-0 translate-x-12 translate-y-[60rem] scale-50 bg-darker opacity-40 blur-3xl md:-translate-y-[10rem] md:translate-x-[50rem] md:scale-75"
         />
         {#if products.length > 10}
             <div
-                class="circle z-0 translate-x-24 -translate-y-[70rem] scale-50 bg-darker opacity-40 blur-3xl md:-translate-x-52 md:translate-y-96 md:scale-100"
+                class="circle z-0 -translate-y-[70rem] translate-x-24 scale-50 bg-darker opacity-40 blur-3xl md:-translate-x-52 md:translate-y-96 md:scale-100"
             />
         {/if}
     {/if}

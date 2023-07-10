@@ -1,7 +1,6 @@
 <script>
     import "./Product.css";
     import ProductInner from "./ProductInner.svelte";
-    import { onMount } from "svelte";
     export let product;
 </script>
 

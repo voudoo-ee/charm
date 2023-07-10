@@ -1,4 +1,8 @@
 export function shortenName(name, length = 20) {
+    if (typeof name !== "string") {
+        throw new Error("Name must be a string");
+    }
+
     if (name.length > length) {
         return name.slice(0, length) + "...";
     } else {

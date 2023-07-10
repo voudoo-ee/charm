@@ -36,7 +36,7 @@
 <ContactModal />
 <ImagesModal />
 <!--TODO maybe add custom sorting of products?-->
-<h1 class="mt-[4rem] pl-8 font-monaSansExtraBoldWide text-3xl md:pt-8 md:text-[4rem]">
+<h1 class="mt-56 pl-8 font-monaSansExtraBoldWide text-3xl md:pt-8 md:text-[4rem]">
     Aitame hoida raha kokku.
 </h1>
 <h2 class="z-10 pl-8 pr-4 pt-2 font-monaSansSemiBold text-xl text-lightgrayish md:pt-9 md:text-2xl">

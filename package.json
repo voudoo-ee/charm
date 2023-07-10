@@ -8,7 +8,6 @@
         "preview": "vite preview",
         "prettier:lint": "prettier --plugin-search-dir . --check . && eslint .",
         "prettier:format": "prettier --plugin-search-dir . --write .",
-        "prettier:check": "prettier --plugin-search-dir . --check . && eslint .",
         "lhci:mobile": "lhci autorun",
         "lhci:desktop": "lhci autorun --collect.settings.preset=desktop"
     },

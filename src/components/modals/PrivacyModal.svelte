@@ -48,7 +48,7 @@
             <h1>Contacting us</h1>
 
             If you have any questions about this Privacy Policy, the practices of this Site, or your
-            dealings with this Site, please contact us at<span>kadirklade[at]protonmail.com</span>.
+            dealings with this Site, please contact us at <span>kadirklade[at]protonmail.com</span>.
 
             <br /><br />
             This document was last updated on 2/14/2023.

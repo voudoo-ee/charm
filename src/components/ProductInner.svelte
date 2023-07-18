@@ -12,7 +12,7 @@
 
 <img
     class="h-48 w-96 -translate-y-5 object-contain pt-6"
-    src={image_url}
+    src={image_url.replace("800/800", "400/400")}
     decoding="async"
     loading="lazy"
     width={200}

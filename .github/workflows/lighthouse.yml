@@ -4,6 +4,8 @@ on: [push]
 jobs:
     lighthouseci:
         runs-on: ubuntu-latest
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3

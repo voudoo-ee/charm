@@ -1149,6 +1149,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"charm@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "charm@workspace:."
+  dependencies:
+    "@lhci/cli": ^0.12.0
+    "@prisma/client": ^5.0.0
+    "@sveltejs/adapter-auto": ^2.1.0
+    "@sveltejs/adapter-cloudflare": ^2.3.1
+    "@sveltejs/kit": ^1.22.3
+    autoprefixer: ^10.4.14
+    daisyui: ^3.2.1
+    eslint: ^8.45.0
+    eslint-config-prettier: ^8.8.0
+    eslint-plugin-svelte3: ^4.0.0
+    html5-qrcode: ^2.3.8
+    postcss: ^8.4.26
+    prettier: ^3.0.0
+    prettier-plugin-svelte: ^2.10.1
+    prettier-plugin-tailwindcss: ^0.4.1
+    prisma: ^5.0.0
+    svelte: ^4.0.5
+    tailwindcss: ^3.3.3
+    undici: ^5.22.1
+    vite: ^4.4.4
+  languageName: unknown
+  linkType: soft
+
 "chokidar@npm:^3.5.3":
   version: 3.5.3
   resolution: "chokidar@npm:3.5.3"
@@ -4704,33 +4731,6 @@ __metadata:
   checksum: bf1179de47100353ef002d96e2b20782420a388cc5a451a1c3564643fde0423ac7b689a4cded728a6dee5e30a80e44089790be4bf5c37189b14704bf8a6efaf6
   languageName: node
   linkType: hard
-
-"svelte-prism@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "svelte-prism@workspace:."
-  dependencies:
-    "@lhci/cli": ^0.12.0
-    "@prisma/client": ^5.0.0
-    "@sveltejs/adapter-auto": ^2.1.0
-    "@sveltejs/adapter-cloudflare": ^2.3.1
-    "@sveltejs/kit": ^1.22.3
-    autoprefixer: ^10.4.14
-    daisyui: ^3.2.1
-    eslint: ^8.45.0
-    eslint-config-prettier: ^8.8.0
-    eslint-plugin-svelte3: ^4.0.0
-    html5-qrcode: ^2.3.8
-    postcss: ^8.4.26
-    prettier: ^3.0.0
-    prettier-plugin-svelte: ^2.10.1
-    prettier-plugin-tailwindcss: ^0.4.1
-    prisma: ^5.0.0
-    svelte: ^4.0.5
-    tailwindcss: ^3.3.3
-    undici: ^5.22.1
-    vite: ^4.4.4
-  languageName: unknown
-  linkType: soft
 
 "svelte@npm:^4.0.5":
   version: 4.0.5

@@ -11,3 +11,5 @@ vite.config.ts.timestamp-*
 .idea
 ngrok.exe
 .lighthouseci
+*.log
+.yarn

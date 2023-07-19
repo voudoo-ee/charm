@@ -10,8 +10,7 @@
         "prettier:format": "prettier --plugin-search-dir . --write .",
         "prettier:check": "prettier --plugin-search-dir . --check . && eslint .",
         "lhci:mobile": "lhci autorun",
-        "lhci:desktop": "lhci autorun --collect.settings.preset=desktop",
-        "postinstall": "prisma generate"
+        "lhci:desktop": "lhci autorun --collect.settings.preset=desktop"
     },
     "devDependencies": {
         "@lhci/cli": "^0.12.0",

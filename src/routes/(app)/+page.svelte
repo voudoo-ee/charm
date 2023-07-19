@@ -28,9 +28,9 @@
         if (isMobileUserAgent()) {
             document.querySelector("#scanner-ad").href = "/scanner";
         }
-        if (window.screen.width < 768) {
-            document.querySelector("#description-br").remove();
-        }
+        // if (window.screen.width > 768) {
+        //     document.querySelector("#description-br").remove();
+        // }
     });
 </script>
 
@@ -55,7 +55,7 @@
         class="hover-underline-animation font-interMedium text-darker transition duration-300"
     >otsingumootoriga
     </span>
-    leiate igale toidupoe<br id="description-br">
+    leiate igale toidupoe<br class="hidden md:block">
     tootele kõige odavama hinna.
 </h2>
 

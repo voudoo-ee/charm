@@ -7,6 +7,7 @@
     <!-- svelte-ignore a11y-label-has-associated-control -->
     <label class="modal-box relative top-5">
         <label for="cookieModal" class="btn-sm btn-circle btn absolute right-2 top-2">✕</label>
+        
         <h3>Cookie Policy</h3>
         <div>
             This Cookie Policy explains how our website (the "Site") uses cookies, web beacons, and

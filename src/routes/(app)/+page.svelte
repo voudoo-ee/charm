@@ -8,6 +8,7 @@
     import ImagesModal from "../../components/modals/ImagesModal.svelte";
     import { isMobileUserAgent } from "$lib/util.js";
     import { onMount } from "svelte";
+    import Notification from "../../components/Notification.svelte";
 
     export let data;
     let highlighted = false;
@@ -27,6 +28,9 @@
         if (isMobileUserAgent()) {
             document.querySelector("#scanner-ad").href = "/scanner";
         }
+        if (window.screen.width < 768) {
+            document.querySelector("#description-br").remove();
+        }
     });
 </script>
 
@@ -36,21 +40,23 @@
 <ContactModal />
 <ImagesModal />
 <!--TODO maybe add custom sorting of products?-->
-<h1 class="mt-[4rem] pl-8 font-monaSansExtraBoldWide text-3xl md:pt-8 md:text-[4rem]">
-    Aitame hoida raha kokku.
+<h1 class="mt-40 px-8 font-gilroyBold text-5xl text-center md:pt-8 md:text-[5rem] leading-1 md:leading-[5rem]">
+    Aitame<br> hoida raha <span class="font-gilroyBold text-black" id="svg-base">kokku</span>.
 </h1>
-<h2 class="z-10 pl-8 pr-4 pt-2 font-monaSansSemiBold text-xl text-lightgrayish md:pt-9 md:text-2xl">
+<h2 class="z-10 px-8 pt-8 font-interMedium text-xl text-center text-description md:pt-9 md:text-2xl md:px-16">
     Meie
     <span
         on:mouseover={setHighlighted}
         on:mouseout={setHighlighted}
         on:blur={setHighlighted}
         on:focus={setHighlighted}
-        class="hover-underline-animation font-monaSansSemiBold text-darker transition duration-300"
-    >
-        otsingumootoriga
+        role="button"
+        tabindex="0"
+        class="hover-underline-animation font-interMedium text-darker transition duration-300"
+    >otsingumootoriga
     </span>
-    leiate igale toidupoe tootele kõige odavama hinna.
+    leiate igale toidupoe<br id="description-br">
+    tootele kõige odavama hinna.
 </h2>
 
 <Search {highlighted} on:message={handleMessage} />

@@ -15,9 +15,12 @@ module.exports = {
                 darkish: "#535864",
                 lightgrayish: "#a6adbb",
                 superblue: "#2a303c",
-                special: "#ba78aa"
+                special: "#ba78aa",
+                description: "#4A4E51"
             },
             fontFamily: {
+                interMedium: ["Inter-Medium", "sans-serif"],
+                gilroyBold: ["Gilroy-Bold", "sans-serif"],
                 monaSans: ["Mona-Sans-Regular", "sans-serif"],
                 monaSansBlack: ["Mona-Sans-Black", "sans-serif"],
                 monaSansBlackWide: ["Mona-Sans-BlackWide", "sans-serif"],

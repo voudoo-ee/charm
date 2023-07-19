@@ -429,13 +429,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prisma/engines@npm:4.16.2":
-  version: 4.16.2
-  resolution: "@prisma/engines@npm:4.16.2"
-  checksum: f423e6092c3e558cd089a68ae87459fba7fd390c433df087342b3269c3b04163965b50845150dfe47d01f811781bfff89d5ae81c95ca603c59359ab69ebd810f
-  languageName: node
-  linkType: hard
-
 "@puppeteer/browsers@npm:0.5.0":
   version: 0.5.0
   resolution: "@puppeteer/browsers@npm:0.5.0"
@@ -1168,7 +1161,6 @@ __metadata:
     prettier: ^3.0.0
     prettier-plugin-svelte: ^2.10.1
     prettier-plugin-tailwindcss: ^0.4.1
-    prisma: ^4.14.1
     svelte: ^4.0.5
     tailwindcss: ^3.3.3
     undici: ^5.22.1
@@ -4016,18 +4008,6 @@ __metadata:
   bin:
     prettier: bin/prettier.cjs
   checksum: 6a832876a1552dc58330d2467874e5a0b46b9ccbfc5d3531eb69d15684743e7f83dc9fbd202db6270446deba9c82b79d24383d09924c462b457136a759425e33
-  languageName: node
-  linkType: hard
-
-"prisma@npm:^4.14.1":
-  version: 4.16.2
-  resolution: "prisma@npm:4.16.2"
-  dependencies:
-    "@prisma/engines": 4.16.2
-  bin:
-    prisma: build/index.js
-    prisma2: build/index.js
-  checksum: 1d0ed616abd7f8de22441e333b976705f1cb05abcb206965df3fc6a7ea03911ef467dd484a4bc51fdc6cff72dd9857b9852be5f232967a444af0a98c49bfdb76
   languageName: node
   linkType: hard
 

@@ -8,7 +8,6 @@
     import ImagesModal from "../../components/modals/ImagesModal.svelte";
     import { isMobileUserAgent } from "$lib/util.js";
     import { onMount } from "svelte";
-    import Notification from "../../components/Notification.svelte";
 
     export let data;
     let highlighted = false;

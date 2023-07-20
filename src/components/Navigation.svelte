@@ -1,4 +1,4 @@
-<nav class="fixed left-0 top-0 z-20 w-full border-b border-gray-200 bg-white">
+<nav class="fixed left-0 top-0 z-50 w-full border-b border-gray-200 bg-white">
     <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-2">
         <a href="https://flowbite.com/" class="flex items-center">
             <img src="../logo-black.png" class="mr-3 h-16" alt="Voudoo Logo" />
